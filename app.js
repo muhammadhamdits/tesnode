@@ -12,11 +12,11 @@ app.set('view engine', 'ejs')
 app.set('layout', 'layouts/layout')
 
 // Routing section
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.render('index')
 })
 
 // Starting server
 app.listen(port, () => {
-    console.log("App is listening at http://localhost")
+  console.log("App is listening at http://localhost")
 })
