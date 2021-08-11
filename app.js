@@ -1,6 +1,7 @@
 // Modules import section
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
+const itemController = require('./controllers/itemController')
 
 // Defining variable section
 const port = 80
@@ -12,9 +13,7 @@ app.set('view engine', 'ejs')
 app.set('layout', 'layouts/layout')
 
 // Routing section
-app.get('/', (req, res) => {
-  res.render('index')
-})
+app.get('/', (req, res) => { itemController.index(res) })
 
 // Starting server
 app.listen(port, () => {
